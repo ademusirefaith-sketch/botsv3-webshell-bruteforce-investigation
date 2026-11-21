@@ -22,3 +22,29 @@ Identified anomalous external-to-internal HTTP POST traffic using Splunk:
 ```spl
 index=botsv3 sourcetype="stream:http" src_ip=61.75.35.114
 | stats count by uri_path, status
+
+
+## Evidence
+
+### Figure 1 — Webshell Enumeration Attempts
+![Webshell Attempts](Screenshot%20from%202026-11-21%2011-31-28.png)
+
+### Figure 2 — HTTP Response Distribution
+![Response Distribution](Screenshot%20from%202026-11-21%2011-35-30.png)
+
+### Figure 3 — Attack Timeline
+![Timeline](Screenshot%20from%202026-11-21%2011-38-56.png)
+
+## Remediation & Recommendations
+1. Block `61.75.35.114` at the perimeter firewall and WAF.
+2. Review WAF rules for PHP file enumeration and POST scanning.
+3. Alert on >20x 404 responses from a single external IP within 60 seconds.
+4. Verify no PHP webshells exist on `172.16.0.109` via file integrity monitoring.
+
+## Tools Used
+- Splunk Enterprise (BOTSv3 Dataset)
+- SPL (Splunk Processing Language)
+- MITRE ATT&CK: T1190 - Exploit Public-Facing Application
+
+## Author
+SOC Analyst Investigation — BOTSv3 Lab
