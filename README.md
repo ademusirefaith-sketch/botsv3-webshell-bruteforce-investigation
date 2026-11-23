@@ -27,13 +27,13 @@ index=botsv3 sourcetype="stream:http" src_ip=61.75.35.114
 ## Evidence
 
 ### Figure 1 — Webshell Enumeration Attempts
-![Webshell Attempts](Screenshot%20from%202026-11-21%2011-31-28.png)
+![Figure 1 - Webshell Enumeration Attempts](figure1-enumeration.png)
 
 ### Figure 2 — HTTP Response Distribution
-![Response Distribution](Screenshot%20from%202026-11-21%2011-35-30.png)
+![Figure 2 - HTTP Response Distribution](figure2-status.png)
 
 ### Figure 3 — Attack Timeline
-![Timeline](Screenshot%20from%202026-11-21%2011-38-56.png)
+![Figure 3 - Attack Timeline](figure3-timeline.png)
 
 ## Remediation & Recommendations
 1. Block `61.75.35.114` at the perimeter firewall and WAF.
