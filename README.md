@@ -26,13 +26,10 @@ index=botsv3 sourcetype="stream:http" src_ip=61.75.35.114
 
 ## Evidence
 
-### Figure 1 — Webshell Enumeration Attempts
 ![Figure 1 - Webshell Enumeration Attempts](figure1-enumeration.png)
 
-### Figure 2 — HTTP Response Distribution
 ![Figure 2 - HTTP Response Distribution](figure2-status.png)
 
-### Figure 3 — Attack Timeline
 ![Figure 3 - Attack Timeline](figure3-timeline.png)
 
 ## Remediation & Recommendations
