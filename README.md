@@ -22,7 +22,7 @@ Identified anomalous external-to-internal HTTP POST traffic using Splunk:
 ```spl
 index=botsv3 sourcetype="stream:http" src_ip=61.75.35.114
 | stats count by uri_path, status
-
+```
 
 ## Evidence
 
